@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/WorkoutTableViewController.swift">
+   </FileRef>
+   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

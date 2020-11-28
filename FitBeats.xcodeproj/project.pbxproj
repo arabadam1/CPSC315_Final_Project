@@ -14,6 +14,10 @@
 		7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB182571CE6A007F5006 /* FitBeats.xcdatamodeld */; };
 		7C63DB1C2571CE6C007F5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB1B2571CE6C007F5006 /* Assets.xcassets */; };
 		7C63DB1F2571CE6C007F5006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB1D2571CE6C007F5006 /* LaunchScreen.storyboard */; };
+		AB65ED082572DC9A00BFB438 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED042572DC9900BFB438 /* WorkoutTableViewController.swift */; };
+		AB65ED092572DC9A00BFB438 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED072572DC9A00BFB438 /* StartViewController.swift */; };
+		AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED062572DC9A00BFB438 /* MusicViewController.swift */; };
+		AB65ED0B2572DC9A00BFB438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED052572DC9A00BFB438 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		7C63DB1B2571CE6C007F5006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C63DB1E2571CE6C007F5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C63DB202571CE6C007F5006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB65ED042572DC9900BFB438 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkoutTableViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/WorkoutTableViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 		7C63DB0E2571CE6A007F5006 /* FitBeats */ = {
 			isa = PBXGroup;
 			children = (
+				AB65ED052572DC9A00BFB438 /* MainViewController.swift */,
+				AB65ED062572DC9A00BFB438 /* MusicViewController.swift */,
+				AB65ED072572DC9A00BFB438 /* StartViewController.swift */,
+				AB65ED042572DC9900BFB438 /* WorkoutTableViewController.swift */,
 				7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */,
 				7C63DB112571CE6A007F5006 /* SceneDelegate.swift */,
 				7C63DB132571CE6A007F5006 /* ViewController.swift */,
@@ -140,10 +152,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB65ED082572DC9A00BFB438 /* WorkoutTableViewController.swift in Sources */,
+				AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */,
 				7C63DB142571CE6A007F5006 /* ViewController.swift in Sources */,
 				7C63DB102571CE6A007F5006 /* AppDelegate.swift in Sources */,
 				7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */,
 				7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */,
+				AB65ED092572DC9A00BFB438 /* StartViewController.swift in Sources */,
+				AB65ED0B2572DC9A00BFB438 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
