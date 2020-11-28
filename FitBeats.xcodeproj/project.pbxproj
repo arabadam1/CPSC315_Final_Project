@@ -18,6 +18,7 @@
 		AB5AD9962572E1DE003440D2 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */; };
 		AB5AD9972572E1DE003440D2 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */; };
 		AB5AD9982572E1DE003440D2 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */; };
+		AB5AD99A2572E532003440D2 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5AD9992572E532003440D2 /* SpotifyiOS.framework */; };
 		AB65ED092572DC9A00BFB438 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED072572DC9A00BFB438 /* StartViewController.swift */; };
 		AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED062572DC9A00BFB438 /* MusicViewController.swift */; };
 		AB65ED0B2572DC9A00BFB438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED052572DC9A00BFB438 /* MainViewController.swift */; };
@@ -37,6 +38,8 @@
 		AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		AB5AD9992572E532003440D2 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitBeats-Bridging-Header.h"; sourceTree = "<group>"; };
 		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
 		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
 		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5AD99A2572E532003440D2 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +76,7 @@
 		7C63DB0E2571CE6A007F5006 /* FitBeats */ = {
 			isa = PBXGroup;
 			children = (
+				AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */,
 				AB5AD9912572E1DE003440D2 /* Exercise+CoreDataClass.swift */,
 				AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */,
 				AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */,
@@ -80,6 +85,7 @@
 				AB5AD98F2572DE22003440D2 /* WorkoutTableTableViewController.swift */,
 				AB65ED062572DC9A00BFB438 /* MusicViewController.swift */,
 				AB65ED072572DC9A00BFB438 /* StartViewController.swift */,
+				AB5AD9992572E532003440D2 /* SpotifyiOS.framework */,
 				7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */,
 				7C63DB112571CE6A007F5006 /* SceneDelegate.swift */,
 				7C63DB152571CE6A007F5006 /* Main.storyboard */,
@@ -320,13 +326,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FitBeats",
+				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Rabadam.FitBeats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FitBeats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -339,13 +352,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GUYPJD4NUE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FitBeats",
+				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Rabadam.FitBeats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FitBeats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
