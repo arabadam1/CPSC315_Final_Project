@@ -40,9 +40,9 @@
 		AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9992572E532003440D2 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitBeats-Bridging-Header.h"; sourceTree = "<group>"; };
-		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -331,7 +331,7 @@
 					"$(PROJECT_DIR)/FitBeats",
 				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,7 +357,7 @@
 					"$(PROJECT_DIR)/FitBeats",
 				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
