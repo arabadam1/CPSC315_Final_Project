@@ -37,9 +37,9 @@
 		AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

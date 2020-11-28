@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import CoreData
 
 class WorkoutTableTableViewController: UITableViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var workouts = [Workout]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,7 +20,7 @@ class WorkoutTableTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -27,29 +31,28 @@ class WorkoutTableTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        if section == 0 {
+            return workouts.count
+        }
         return 0
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        
         // Configure the cell...
+        let workout = workouts[indexPath.row]
+        cell.textLabel?.text = workout.name
 
         return cell
     }
-    */
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -59,7 +62,6 @@ class WorkoutTableTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
@@ -75,6 +77,27 @@ class WorkoutTableTableViewController: UITableViewController {
         return true
     }
     */
+    
+    func saveWorkouts() {
+        do {
+            try context.save()
+        }
+        catch {
+            print("Error saving workouts \(error)")
+        }
+        tableView.reloadData()
+    }
+    
+    func loadWorkouts() {
+        let request: NSFetchRequest<Workout> = Workout.fetchRequest()
+        do {
+            workouts = try context.fetch(request)
+        }
+        catch {
+            print("Error loading workouts \(error)")
+        }
+        tableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
