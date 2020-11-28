@@ -39,6 +39,7 @@
 		AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9992572E532003440D2 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitBeats-Bridging-Header.h"; sourceTree = "<group>"; };
 		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
 		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
 		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
@@ -75,6 +76,7 @@
 		7C63DB0E2571CE6A007F5006 /* FitBeats */ = {
 			isa = PBXGroup;
 			children = (
+				AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */,
 				AB5AD9912572E1DE003440D2 /* Exercise+CoreDataClass.swift */,
 				AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */,
 				AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */,
@@ -329,12 +331,15 @@
 					"$(PROJECT_DIR)/FitBeats",
 				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Rabadam.FitBeats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FitBeats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -352,12 +357,15 @@
 					"$(PROJECT_DIR)/FitBeats",
 				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Rabadam.FitBeats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FitBeats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
