@@ -2,7 +2,7 @@
 //  Workout+CoreDataClass.swift
 //  FitBeats
 //
-//  Created by Adrian Rabadam on 11/27/20.
+//  Created by Dillon Shipley on 11/28/20.
 //
 //
 

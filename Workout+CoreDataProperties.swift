@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  FitBeats
 //
-//  Created by Adrian Rabadam on 11/27/20.
+//  Created by Dillon Shipley on 11/28/20.
 //
 //
 
@@ -35,9 +35,5 @@ extension Workout {
 
     @objc(removeExercises:)
     @NSManaged public func removeFromExercises(_ values: NSSet)
-
-}
-
-extension Workout : Identifiable {
 
 }
