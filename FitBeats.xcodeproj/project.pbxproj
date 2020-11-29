@@ -24,6 +24,7 @@
 		AB5AD9A125743132003440D2 /* WorkoutTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99D25743132003440D2 /* WorkoutTableTableViewController.swift */; };
 		AB5AD9A225743132003440D2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99E25743132003440D2 /* StartViewController.swift */; };
 		AB5AD9A325743132003440D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99F25743132003440D2 /* MainViewController.swift */; };
+		AB5AD9A5257436B5003440D2 /* ActiveExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9A4257436B5003440D2 /* ActiveExerciseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		AB5AD99D25743132003440D2 /* WorkoutTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableTableViewController.swift; sourceTree = "<group>"; };
 		AB5AD99E25743132003440D2 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		AB5AD99F25743132003440D2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AB5AD9A4257436B5003440D2 /* ActiveExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveExerciseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				AB5AD98F2572DE22003440D2 /* WorkoutTableViewController.swift */,
 				AB5AD99C25743132003440D2 /* MusicViewController.swift */,
 				AB5AD99E25743132003440D2 /* StartViewController.swift */,
+				AB5AD9A4257436B5003440D2 /* ActiveExerciseCell.swift */,
 				AB5AD99D25743132003440D2 /* WorkoutTableTableViewController.swift */,
 				7C190F0E2573A5DB008C938D /* SpotifySDK.swift */,
 				7C190F0025732DFB008C938D /* FitBeats-Bridging-Header.h */,
@@ -180,6 +183,7 @@
 				AB5AD9A225743132003440D2 /* StartViewController.swift in Sources */,
 				7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */,
 				AB5AD9A325743132003440D2 /* MainViewController.swift in Sources */,
+				AB5AD9A5257436B5003440D2 /* ActiveExerciseCell.swift in Sources */,
 				7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */,
 				7C190F0F2573A5DB008C938D /* SpotifySDK.swift in Sources */,
 				AB5AD9A125743132003440D2 /* WorkoutTableTableViewController.swift in Sources */,
