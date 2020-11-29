@@ -7,24 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C190F0F2573A5DB008C938D /* SpotifySDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C190F0E2573A5DB008C938D /* SpotifySDK.swift */; };
 		7C63DB102571CE6A007F5006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */; };
 		7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB112571CE6A007F5006 /* SceneDelegate.swift */; };
 		7C63DB172571CE6A007F5006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB152571CE6A007F5006 /* Main.storyboard */; };
 		7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C63DB182571CE6A007F5006 /* FitBeats.xcdatamodeld */; };
 		7C63DB1C2571CE6C007F5006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB1B2571CE6C007F5006 /* Assets.xcassets */; };
 		7C63DB1F2571CE6C007F5006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C63DB1D2571CE6C007F5006 /* LaunchScreen.storyboard */; };
-		AB5AD9902572DE22003440D2 /* WorkoutTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD98F2572DE22003440D2 /* WorkoutTableTableViewController.swift */; };
+		AB5AD9902572DE22003440D2 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD98F2572DE22003440D2 /* WorkoutTableViewController.swift */; };
 		AB5AD9952572E1DE003440D2 /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9912572E1DE003440D2 /* Exercise+CoreDataClass.swift */; };
 		AB5AD9962572E1DE003440D2 /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */; };
 		AB5AD9972572E1DE003440D2 /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */; };
 		AB5AD9982572E1DE003440D2 /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */; };
 		AB5AD99A2572E532003440D2 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5AD9992572E532003440D2 /* SpotifyiOS.framework */; };
-		AB65ED092572DC9A00BFB438 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED072572DC9A00BFB438 /* StartViewController.swift */; };
-		AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED062572DC9A00BFB438 /* MusicViewController.swift */; };
-		AB65ED0B2572DC9A00BFB438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED052572DC9A00BFB438 /* MainViewController.swift */; };
+		AB5AD9A025743132003440D2 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99C25743132003440D2 /* MusicViewController.swift */; };
+		AB5AD9A125743132003440D2 /* WorkoutTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99D25743132003440D2 /* WorkoutTableTableViewController.swift */; };
+		AB5AD9A225743132003440D2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99E25743132003440D2 /* StartViewController.swift */; };
+		AB5AD9A325743132003440D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD99F25743132003440D2 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C190F0025732DFB008C938D /* FitBeats-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FitBeats-Bridging-Header.h"; sourceTree = "<group>"; };
+		7C190F0E2573A5DB008C938D /* SpotifySDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifySDK.swift; sourceTree = "<group>"; };
 		7C63DB0C2571CE6A007F5006 /* FitBeats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBeats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C63DB112571CE6A007F5006 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,16 +37,16 @@
 		7C63DB1B2571CE6C007F5006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C63DB1E2571CE6C007F5006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C63DB202571CE6C007F5006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB5AD98F2572DE22003440D2 /* WorkoutTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableTableViewController.swift; sourceTree = "<group>"; };
+		AB5AD98F2572DE22003440D2 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		AB5AD9912572E1DE003440D2 /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AB5AD9992572E532003440D2 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
-		AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitBeats-Bridging-Header.h"; sourceTree = "<group>"; };
-		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED072572DC9A00BFB438 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/StartViewController.swift; sourceTree = "<absolute>"; };
+		AB5AD99C25743132003440D2 /* MusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		AB5AD99D25743132003440D2 /* WorkoutTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableTableViewController.swift; sourceTree = "<group>"; };
+		AB5AD99E25743132003440D2 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		AB5AD99F25743132003440D2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,21 +80,23 @@
 		7C63DB0E2571CE6A007F5006 /* FitBeats */ = {
 			isa = PBXGroup;
 			children = (
-				AB5AD99B2572E790003440D2 /* FitBeats-Bridging-Header.h */,
-				AB5AD9912572E1DE003440D2 /* Exercise+CoreDataClass.swift */,
-				AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */,
-				AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */,
-				AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */,
-				AB65ED052572DC9A00BFB438 /* MainViewController.swift */,
-				AB5AD98F2572DE22003440D2 /* WorkoutTableTableViewController.swift */,
-				AB65ED062572DC9A00BFB438 /* MusicViewController.swift */,
-				AB65ED072572DC9A00BFB438 /* StartViewController.swift */,
+				AB5AD99F25743132003440D2 /* MainViewController.swift */,
+				AB5AD98F2572DE22003440D2 /* WorkoutTableViewController.swift */,
+				AB5AD99C25743132003440D2 /* MusicViewController.swift */,
+				AB5AD99E25743132003440D2 /* StartViewController.swift */,
+				AB5AD99D25743132003440D2 /* WorkoutTableTableViewController.swift */,
+				7C190F0E2573A5DB008C938D /* SpotifySDK.swift */,
+				7C190F0025732DFB008C938D /* FitBeats-Bridging-Header.h */,
 				AB5AD9992572E532003440D2 /* SpotifyiOS.framework */,
 				7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */,
 				7C63DB112571CE6A007F5006 /* SceneDelegate.swift */,
 				7C63DB152571CE6A007F5006 /* Main.storyboard */,
-				7C63DB1B2571CE6C007F5006 /* Assets.xcassets */,
 				7C63DB1D2571CE6C007F5006 /* LaunchScreen.storyboard */,
+				7C63DB1B2571CE6C007F5006 /* Assets.xcassets */,
+				AB5AD9912572E1DE003440D2 /* Exercise+CoreDataClass.swift */,
+				AB5AD9922572E1DE003440D2 /* Exercise+CoreDataProperties.swift */,
+				AB5AD9932572E1DE003440D2 /* Workout+CoreDataClass.swift */,
+				AB5AD9942572E1DE003440D2 /* Workout+CoreDataProperties.swift */,
 				7C63DB202571CE6C007F5006 /* Info.plist */,
 				7C63DB182571CE6A007F5006 /* FitBeats.xcdatamodeld */,
 			);
@@ -167,16 +173,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */,
 				AB5AD9972572E1DE003440D2 /* Workout+CoreDataClass.swift in Sources */,
-				AB5AD9902572DE22003440D2 /* WorkoutTableTableViewController.swift in Sources */,
+				AB5AD9902572DE22003440D2 /* WorkoutTableViewController.swift in Sources */,
 				7C63DB102571CE6A007F5006 /* AppDelegate.swift in Sources */,
 				AB5AD9952572E1DE003440D2 /* Exercise+CoreDataClass.swift in Sources */,
+				AB5AD9A225743132003440D2 /* StartViewController.swift in Sources */,
 				7C63DB122571CE6A007F5006 /* SceneDelegate.swift in Sources */,
+				AB5AD9A325743132003440D2 /* MainViewController.swift in Sources */,
 				7C63DB1A2571CE6A007F5006 /* FitBeats.xcdatamodeld in Sources */,
-				AB65ED092572DC9A00BFB438 /* StartViewController.swift in Sources */,
+				7C190F0F2573A5DB008C938D /* SpotifySDK.swift in Sources */,
+				AB5AD9A125743132003440D2 /* WorkoutTableTableViewController.swift in Sources */,
+				AB5AD9A025743132003440D2 /* MusicViewController.swift in Sources */,
 				AB5AD9982572E1DE003440D2 /* Workout+CoreDataProperties.swift in Sources */,
-				AB65ED0B2572DC9A00BFB438 /* MainViewController.swift in Sources */,
 				AB5AD9962572E1DE003440D2 /* Exercise+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +335,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GUYPJD4NUE;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FitBeats",
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -339,7 +347,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Rabadam.FitBeats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FitBeats-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "./FitBeats/FitBeats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -353,8 +361,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GUYPJD4NUE;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/FitBeats",
+					"$(SRCROOT)/**",
+					"$(SRCROOT)/**",
 				);
 				INFOPLIST_FILE = FitBeats/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
@@ -365,7 +373,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Adrian-Rabadam.FitBeats";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FitBeats-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "./FitBeats/FitBeats-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -11,4 +11,4 @@
 #import <SpotifyiOS/SpotifyiOS.h>
 
 
-#endif /* FitBeats_Bridging_Header_h */
+#endif FitBeats_Bridging_Header_h

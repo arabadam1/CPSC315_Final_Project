@@ -9,12 +9,22 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    var workoutSelected : Workout?
+    
+    @IBOutlet workoutName : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if(workoutSelected != nil){
+            if(workoutSelected.name != nil){
+                workoutName.text = workoutSelected.name;
+            }
+        } else {
+            workoutName.text = "Please select a workout before starting!"
+        }
     }
-
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //if there is a valid identifier
         if let identifier = segue.identifier  {
@@ -24,7 +34,20 @@ class MainViewController: UIViewController {
             } else if identifier == "ChangeMusicSegue" {
 
             } else if identifier == "ChangeWorkoutSegue" {
-                
+                if let workoutVC = segue.destination as? WorkoutTableViewController {
+                        
+                }
+            }
+        }
+    }
+    
+    override func shouldPerformSegue (withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "BeginWorkoutSegue" {
+            if(workoutSelected == nil){
+                let alertController = UIAlertController(title: "No Workout Selected", message: "Please choose a workout before starting!", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                present(alertController, animated: true, completion: nil)
+                return false
             }
         }
     }

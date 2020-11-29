@@ -7,7 +7,7 @@
 import UIKit
 import CoreData
 
-class WorkoutTableTableViewController: UITableViewController {
+class WorkoutViewController: UITableViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var workouts = [Workout]()
@@ -19,6 +19,8 @@ class WorkoutTableTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        loadWorkouts()
     }
 
     // MARK: - Table view data source
@@ -58,6 +60,27 @@ class WorkoutTableTableViewController: UITableViewController {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+    
+    @IBAction func createBarButtonPressed(_ sender: UIBarButtonItem) {
+        var alertTextField = UITextField()
+        let alert = UIAlertController(title: "Create New Workout", message: "", preferredStyle: .alert)
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Name of Workout"
+            alertTextField = textField
+        }
+        
+        let action = UIAlertAction(title: "Create", style: .default) { (alertAction) in
+            let text = alertTextField.text!
+            let newWorkout = Workout(context: self.context)
+            newWorkout.name = text
+            self.workouts.append(newWorkout)
+            self.saveWorkouts()
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 
     /*
