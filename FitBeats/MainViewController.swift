@@ -24,6 +24,9 @@ class MainViewController: UIViewController {
             } else if identifier == "ChangeMusicSegue" {
 
             } else if identifier == "ChangeWorkoutSegue" {
+                if let workoutVC = segue.destination as? WorkoutTableViewController {
+                        
+                }
                 
             }
         }

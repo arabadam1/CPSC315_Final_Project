@@ -39,3 +39,7 @@ extension Exercise {
     @NSManaged public func removeFromParentWorkout(_ values: NSSet)
 
 }
+
+extension Exercise : Identifiable {
+    
+}
