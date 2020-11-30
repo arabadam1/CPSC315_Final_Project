@@ -11,14 +11,14 @@ class MainViewController: UIViewController {
 
     var workoutSelected : Workout?
     
-    @IBOutlet workoutName : UILabel!
+    @IBOutlet var workoutName : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         if(workoutSelected != nil){
-            if(workoutSelected.name != nil){
-                workoutName.text = workoutSelected.name;
+            if(workoutSelected!.name != nil){
+                workoutName.text = workoutSelected!.name;
             }
         } else {
             workoutName.text = "Please select a workout before starting!"
@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
                 return false
             }
         }
+        return true
     }
 }
 

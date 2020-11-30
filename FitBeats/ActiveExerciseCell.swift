@@ -10,18 +10,30 @@ import UIKit
 class ActiveExerciseCell: UITableViewCell {
 
     var currentExercise : Exercise
+    var timer : Timer? = nil
     
-    @IBOutlet var exerciseName : UILabel = currentExercise.name!
-    @IBOutlet var exerciseSubtype : UILabel!
+    
+    @IBOutlet var exerciseName : UILabel!
+    //@IBOutlet var exerciseSubtype : UILabel!
     @IBOutlet var timeRemaining : UILabel!
     
-    var secondsLeft : Int = currentExercise.length {
+    var secondsLeft : Int {
         didSet {
             if(secondsLeft == 0){
                 //nextExercise()
             }
             timeRemaining.text = "\(secondsLeft)"
         }
+    }
+    
+    init(exercise : Exercise){
+        self.currentExercise =  exercise
+        self.exerciseName.text = currentExercise.name
+        self.secondsLeft = Int(currentExercise.length)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func awakeFromNib() {
@@ -37,7 +49,7 @@ class ActiveExerciseCell: UITableViewCell {
     
     func startTimer () {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
-            self.seconds -= 1
+            self.secondsLeft -= 1
         })
     }
 

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class StartViewController: UIViewController, UITableViewController {
+class StartViewController: UITableViewController {
     
     var exercises = [Exercise]()
     
