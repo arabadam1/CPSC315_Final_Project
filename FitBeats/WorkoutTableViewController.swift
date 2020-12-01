@@ -24,10 +24,10 @@ class WorkoutTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    /*override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
-    }
+    }*/
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
@@ -51,15 +51,21 @@ class WorkoutTableViewController: UITableViewController {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
-    // Override to support editing the table view.
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let workout = workouts.remove(at: sourceIndexPath.row)
+        workouts.insert(workout, at: destinationIndexPath.row)
+        
+        tableView.reloadData()
+        saveWorkouts()
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        context.delete(workouts[indexPath.row])
+        workouts.remove(at: indexPath.row)
+        
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        saveWorkouts()
     }
     
     @IBAction func createBarButtonPressed(_ sender: UIBarButtonItem) {
@@ -83,11 +89,21 @@ class WorkoutTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier, identifier == "ShowExercisesSegue"  {
+            
+            guard let exerciseTableVC = segue.destination as? ExerciseTableViewController else {
+                return
+            }
+        
+            guard let selectedIndexPath = tableView.indexPathForSelectedRow else {
+                return
+            }
+            
+            let workout = workouts[selectedIndexPath.row]
+            exerciseTableVC.workout = workout
+        }
     }
-    */
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -116,6 +132,11 @@ class WorkoutTableViewController: UITableViewController {
             print("Error loading workouts \(error)")
         }
         tableView.reloadData()
+    }
+    
+    @IBAction func editButtonPressed(_ sender:  UIBarButtonItem) {
+        let newEditingMode = !tableView.isEditing
+        tableView.setEditing(newEditingMode, animated: true)
     }
 
     /*

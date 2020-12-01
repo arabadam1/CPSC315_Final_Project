@@ -26,7 +26,7 @@ class StartTableViewController: UITableViewController {
         }
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ActiveExerciseCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ActiveExerciseCell", for: indexPath) as! ActiveExerciseCell
             
             // Configure the cell...
             let exercise = exercises[indexPath.row]

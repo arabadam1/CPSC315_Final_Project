@@ -78,7 +78,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate/*, SPTAppRemoteDelegate, S
     }
     
     // MARK: - Spotify
-    
+    /*func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        // Connection was successful, you can begin issuing commands
+          self.appRemote.playerAPI?.delegate = self
+          self.appRemote.playerAPI?.subscribe(toPlayerState: { (result, error) in
+            if let error = error {
+              debugPrint(error.localizedDescription)
+            }
+          })
+        print("connected")
+    }
+    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
+      print("disconnected")
+    }
+    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
+      print("failed")
+    }
+    func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
+        debugPrint("Track name: %@", playerState.track.name)
+        print("player state changed")
+    }*/
 
 }
 

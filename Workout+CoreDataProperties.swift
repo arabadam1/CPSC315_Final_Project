@@ -2,7 +2,7 @@
 //  Workout+CoreDataProperties.swift
 //  FitBeats
 //
-//  Created by Dillon Shipley on 11/28/20.
+//  Created by Adrian Rabadam on 11/30/20.
 //
 //
 
@@ -39,5 +39,5 @@ extension Workout {
 }
 
 extension Workout : Identifiable {
-    
+
 }
