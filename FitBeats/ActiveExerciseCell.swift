@@ -27,6 +27,7 @@ class ActiveExerciseCell: UITableViewCell {
     }
     
     init(exercise : Exercise){
+        super.init(style: UITableViewCellStyle, reuseIdentifier: String?)
         self.currentExercise =  exercise
         self.exerciseName.text = currentExercise.name
         self.secondsLeft = Int(currentExercise.length)
