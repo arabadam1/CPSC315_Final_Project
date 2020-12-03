@@ -260,14 +260,35 @@
                     <view key="view" contentMode="scaleToFill" id="XOj-5U-jMb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a25-Fs-gX4">
+                                <rect key="frame" x="124" y="208" width="166" height="30"/>
+                                <state key="normal" title="Disconnect from Spotify"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not connected to Spotify" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpY-7G-een">
+                                <rect key="frame" x="97" y="108" width="220" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0cN-Sh-avA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a25-Fs-gX4" firstAttribute="top" secondItem="0cN-Sh-avA" secondAttribute="top" constant="120" id="SBQ-XO-Atj"/>
+                            <constraint firstItem="cpY-7G-een" firstAttribute="top" secondItem="0cN-Sh-avA" secondAttribute="top" constant="20" id="Wee-vz-AdS"/>
+                            <constraint firstItem="cpY-7G-een" firstAttribute="centerX" secondItem="XOj-5U-jMb" secondAttribute="centerX" id="weN-tZ-CJG"/>
+                            <constraint firstItem="a25-Fs-gX4" firstAttribute="centerX" secondItem="XOj-5U-jMb" secondAttribute="centerX" id="y42-fy-y0X"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Iz-Lb-3Bz"/>
+                    <connections>
+                        <outlet property="connectedLabel" destination="cpY-7G-een" id="tg6-e9-pAZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUE-tf-mXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="829"/>
+            <point key="canvasLocation" x="915.94202898550736" y="828.34821428571422"/>
         </scene>
     </scenes>
     <resources>
@@ -276,6 +297,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
