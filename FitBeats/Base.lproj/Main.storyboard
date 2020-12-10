@@ -61,6 +61,23 @@
                                     <segue destination="BBV-wQ-5Wd" kind="show" identifier="BeginWorkoutSegue" id="7k9-24-0ue"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-h2-4V9">
+                                <rect key="frame" x="141.5" y="138" width="131" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Workout:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-as-DlJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzC-3f-qBs">
+                                        <rect key="frame" x="43" y="40.5" width="45" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,10 +85,15 @@
                             <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="02n-Yj-GOP"/>
                             <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCf-LD-RqQ"/>
                             <constraint firstItem="pIp-De-FaH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFP-c1-bY8"/>
+                            <constraint firstItem="dgv-h2-4V9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPO-Mw-gG5"/>
                             <constraint firstItem="pIp-De-FaH" firstAttribute="top" secondItem="j5r-Gd-x7Z" secondAttribute="bottom" constant="250" id="pqW-gy-MWN"/>
+                            <constraint firstItem="dgv-h2-4V9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sAl-GR-slC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FitBeats" id="f12-uq-Zrr"/>
+                    <connections>
+                        <outlet property="workoutName" destination="rzC-3f-qBs" id="1SO-vD-fq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hCc-tE-h7w" customClass="ActiveExerciseCell" customModule="FitBeats" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveExerciseCell" id="hCc-tE-h7w" customClass="ActiveExerciseCell" customModule="FitBeats" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="21.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hCc-tE-h7w" id="86y-Jh-X7I">
@@ -235,6 +257,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Workouts" id="Okn-MZ-ktF">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; FitBeats" id="IWp-LD-hj7">
+                            <connections>
+                                <segue destination="9fD-nE-ZDp" kind="unwind" identifier="WorkoutUnwindSegue" unwindAction="unwindToMainViewControllerWithSegue:" id="4Rr-1k-p3a"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Edit" id="MSG-at-UDH">
                                 <connections>
@@ -250,6 +277,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mec-Al-JlO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="9fD-nE-ZDp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-253" y="825"/>
         </scene>
@@ -288,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUE-tf-mXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915.94202898550736" y="828.34821428571422"/>
+            <point key="canvasLocation" x="1039" y="825"/>
         </scene>
     </scenes>
     <resources>
