@@ -8,8 +8,6 @@ import UIKit
 
 class ActiveExerciseCell: UITableViewCell {
 
-    var currentExercise : Exercise = Exercise()
-
     @IBOutlet var exerciseName : UILabel?
     @IBOutlet var exerciseSubtype : UILabel!
     @IBOutlet var timeRemaining : UILabel!
@@ -41,8 +39,8 @@ class ActiveExerciseCell: UITableViewCell {
     }
     
     func update(with exercise: Exercise) {
-        exerciseName?.text = currentExercise.name!
-        secondsLeft = Int(currentExercise.length)
+        exerciseName?.text = exercise.name
+        secondsLeft = Int(exercise.length)
     }
 
 }

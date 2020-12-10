@@ -15,42 +15,63 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        if(workoutSelected != nil){
-            guard let name = workoutSelected?.name else {
+        guard let name = workoutSelected?.name else {
                 workoutName.text = "Please select a workout before starting!"
                 return
-            }
-            workoutName.text = name;
         }
+        workoutName.text = name;
+        workoutName.textColor = .green
     }
            
-           override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-               //if there is a valid identifier
-               if let identifier = segue.identifier  {
-                   //and it is the appropriate segue for the detail screen
-                   if identifier == "BeginWorkoutSegue" {
-           
-                   } else if identifier == "ChangeMusicSegue" {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //if there is a valid identifier
+        if let identifier = segue.identifier  {
+            //and it is the appropriate segue for the detail screen
+                if identifier == "BeginWorkoutSegue" {
+                    if let startVC = segue.destination as? StartTableViewController {
+                        startVC.currentWorkout = workoutSelected
+                    }
+                } else if identifier == "ChangeMusicSegue" {
 
-                   } else if identifier == "ChangeWorkoutSegue" {
-                       if let workoutVC = segue.destination as? WorkoutTableViewController {
-                               
-                       }
-                   }
-               }
-           }
+                } else if identifier == "ChangeWorkoutSegue" {
+                    if let workoutVC = segue.destination as? WorkoutTableViewController {
+                        workoutVC.selectedWorkout = workoutSelected
+                    }
+                }
+            }
+        }
            
-           override func shouldPerformSegue (withIdentifier identifier: String, sender: Any?) -> Bool {
-               if identifier == "BeginWorkoutSegue" {
-                   if(workoutSelected == nil){
-                       let alertController = UIAlertController(title: "No Workout Selected", message: "Please choose a workout before starting!", preferredStyle: .alert)
-                       alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
-                       present(alertController, animated: true, completion: nil)
-                       return false
-                   }
-               }
-               return true
-           }
+    /*override func shouldPerformSegue (withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "BeginWorkoutSegue" {
+            guard let workout = workoutSelected else {
+                let alertController = UIAlertController(title: "No Workout Selected", message: "Please choose a workout before starting!", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+                present(alertController, animated: true, completion: nil)
+                return false
+            }
+            guard let startWorkoutVC = segue.destination as? StartTableViewController else {
+                return false
+            }
+            
+            let workout = workouts[selectedIndexPath.row]
+            exerciseTableVC.workout = workout
+        }
+        return true
+    }*/
+    
+    @IBAction func unwindToMainViewController(segue: UIStoryboardSegue) {
+        if let identifier = segue.identifier {
+            if identifier == "WorkoutUnwindSegue" {
+                if let workoutTableVC = segue.source as? WorkoutTableViewController {
+                    if let workout = workoutTableVC.selectedWorkout {
+                        workoutSelected = workout
+                        workoutName.text = workoutSelected?.name;
+                        workoutName.textColor = .green
+                    }
+                }
+            }
+        }
+    }
     
 }
 

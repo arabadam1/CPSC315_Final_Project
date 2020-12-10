@@ -154,6 +154,28 @@ class MusicViewController: UIViewController, UISceneDelegate, UIWindowSceneDeleg
         connectedLabel.text = "Spotify Connected"
         connectedLabel.textColor = .systemGreen
     }
+    
+   /* func getPlaylists() {
+        //DispatchQueue.global(qos: .userInitiated).async {
+
+            let playListRequest = try! SPTPlaylistList.createRequestForGettingPlaylists(forUser: session.canonicalUsername, withAccessToken: session.accessToken)
+
+            Alamofire.request(playListRequest)
+                .response { response in
+
+
+                    let list = try! SPTPlaylistList(from: response.data, with: response.response)
+
+                    for playList in list.items  {
+                        if let playlist = playList as? SPTPartialPlaylist {
+
+
+                            let currentPlaylist: PlaylistItem = PlaylistItem(playlistName: playlist.name, playlistURL: playlist.uri.absoluteString)
+                            self.playlists.append(currentPlaylist)
+                        }
+                    }
+                    self.tableView.reloadData()
+            }*/
           
     @IBAction func disconnectPressed(_ sender: UIButton) {
         self.appRemote.disconnect()

@@ -11,6 +11,8 @@ class WorkoutTableViewController: UITableViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var workouts = [Workout]()
+    var selectedWorkout : Workout? = nil
+    var lastSelectedWorkoutPath : IndexPath? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +21,10 @@ class WorkoutTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(WorkoutTableViewController.selectWorkout))
+        tableView.addGestureRecognizer(longTapGestureRecognizer)
         loadWorkouts()
+        print("General Kenobi")
     }
 
     // MARK: - Table view data source
@@ -42,8 +46,19 @@ class WorkoutTableViewController: UITableViewController {
         // Configure the cell...
         let workout = workouts[indexPath.row]
         cell.textLabel?.text = workout.name
+        if let currWorkout = selectedWorkout {
+            if (workout == currWorkout) {
+                cell.accessoryType = .checkmark
+                lastSelectedWorkoutPath = indexPath
+                //print("Hello there")
+            }
+        }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
     }
 
     // Override to support conditional editing of the table view.
@@ -104,6 +119,31 @@ class WorkoutTableViewController: UITableViewController {
             exerciseTableVC.workout = workout
         }
     }
+    
+    @objc func selectWorkout(sender: UILongPressGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.began {
+            let touchPoint = sender.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: touchPoint) {
+                if let lastIndexPath = lastSelectedWorkoutPath {
+                    tableView.cellForRow(at: lastIndexPath)?.accessoryType = .none
+                    print("Hello there")
+                }
+                tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+                lastSelectedWorkoutPath = indexPath
+            }
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "WorkoutUnwindSegue" {
+            guard let indexPath = lastSelectedWorkoutPath else {
+                print("Workout not selected")
+                return true
+            }
+            selectedWorkout = workouts[indexPath.row]
+        }
+        return true
+    }
 
     /*
     // Override to support conditional rearranging of the table view.
@@ -118,6 +158,7 @@ class WorkoutTableViewController: UITableViewController {
             try context.save()
         }
         catch {
+            
             print("Error saving workouts \(error)")
         }
         tableView.reloadData()

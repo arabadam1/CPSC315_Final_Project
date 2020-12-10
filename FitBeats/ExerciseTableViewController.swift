@@ -129,19 +129,9 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     func loadExercises(withPredicate predicate: NSPredicate? = nil) {
         let request: NSFetchRequest<Exercise> = Exercise.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.caseInsensitiveCompare))
-        request.sortDescriptors = [sortDescriptor]
-        
         let workoutPredicate = NSPredicate(format: "parentWorkout.name MATCHES %@", workout!.name!)
         
-        if let pred = predicate {
-            // need to combine categoryPredicate and pred into a compoud predicate
-            let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [workoutPredicate, pred])
-            request.predicate = compoundPredicate
-        }
-        else {
-            request.predicate = workoutPredicate
-        }
+        request.predicate = workoutPredicate
         
         do {
             exercises = try context.fetch(request)
