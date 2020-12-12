@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="pIp-De-FaH">
-                                <rect key="frame" x="50" y="713" width="314" height="30"/>
+                                <rect key="frame" x="50" y="714" width="314" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-sV-6KW">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
@@ -55,7 +55,8 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
-                                <rect key="frame" x="159" y="433" width="96" height="30"/>
+                                <rect key="frame" x="156.5" y="432" width="101" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Start Workout"/>
                                 <connections>
                                     <segue destination="BBV-wQ-5Wd" kind="show" identifier="BeginWorkoutSegue" id="7k9-24-0ue"/>
@@ -109,20 +110,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveExerciseCell" id="hCc-tE-h7w" customClass="ActiveExerciseCell" customModule="FitBeats" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="21.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="21"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hCc-tE-h7w" id="86y-Jh-X7I">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-J5-Uo5">
-                                            <rect key="frame" x="16" y="0.0" width="45" height="21.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="45" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ0-9Q-eug">
-                                            <rect key="frame" x="354" y="0.0" width="44" height="21.5"/>
+                                            <rect key="frame" x="354" y="0.0" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
