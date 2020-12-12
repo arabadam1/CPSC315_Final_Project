@@ -12,6 +12,9 @@ class MainViewController: UIViewController {
     var workoutSelected : Workout?
     @IBOutlet var workoutName : UILabel!
     
+    let MSD = MySpotifyDelegate()
+    var MusicVC : MusicViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,7 +35,9 @@ class MainViewController: UIViewController {
                         startVC.currentWorkout = workoutSelected
                     }
                 } else if identifier == "ChangeMusicSegue" {
-
+                    if let MusicVC = segue.destination as? MusicViewController {
+                        MusicVC.mySpotifyDelegate = MSD
+                    }
                 } else if identifier == "ChangeWorkoutSegue" {
                     if let workoutVC = segue.destination as? WorkoutTableViewController {
                         workoutVC.selectedWorkout = workoutSelected
