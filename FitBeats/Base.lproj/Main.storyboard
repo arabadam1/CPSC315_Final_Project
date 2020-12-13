@@ -35,35 +35,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="pIp-De-FaH">
-                                <rect key="frame" x="50" y="714" width="314" height="30"/>
+                                <rect key="frame" x="41.5" y="729" width="331" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-sV-6KW">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.83107218709025354" blue="0.82818091332495625" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
                                         <state key="normal" title="Change Workout"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="xZt-yh-yqX" kind="show" identifier="ChangeWorkoutSegue" id="Aax-sq-v4B"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWu-tb-dbS">
-                                        <rect key="frame" x="216" y="0.0" width="98" height="30"/>
+                                        <rect key="frame" x="226" y="0.0" width="105" height="33"/>
+                                        <color key="backgroundColor" red="0.80157611302415421" green="0.70820265549879813" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
                                         <state key="normal" title="Change Music"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="2bt-lG-XQs" kind="show" identifier="ChangeMusicSegue" id="OdP-e7-2N8"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
-                                <rect key="frame" x="156.5" y="432" width="101" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Start Workout"/>
-                                <connections>
-                                    <segue destination="BBV-wQ-5Wd" kind="show" identifier="BeginWorkoutSegue" id="7k9-24-0ue"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dgv-h2-4V9">
-                                <rect key="frame" x="141.5" y="138" width="131" height="61"/>
+                                <rect key="frame" x="141.5" y="417.5" width="131" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Workout:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSv-as-DlJ">
                                         <rect key="frame" x="0.0" y="0.0" width="131" height="20.5"/>
@@ -79,20 +84,43 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpj-Vi-cmV">
+                                <rect key="frame" x="186" y="587" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-Gd-x7Z">
+                                <rect key="frame" x="132.5" y="138" width="149" height="41"/>
+                                <color key="backgroundColor" red="0.88235294117647056" green="1" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="23"/>
+                                <state key="normal" title="Start Workout!"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BBV-wQ-5Wd" kind="show" identifier="BeginWorkoutSegue" id="7k9-24-0ue"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.87570318475469844" blue="0.92467738865138771" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="02n-Yj-GOP"/>
-                            <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bCf-LD-RqQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pIp-De-FaH" secondAttribute="bottom" constant="100" id="LcY-6S-Ol0"/>
+                            <constraint firstItem="j5r-Gd-x7Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QHU-zP-oZT"/>
+                            <constraint firstItem="dgv-h2-4V9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RIS-Bv-OJ2"/>
+                            <constraint firstItem="j5r-Gd-x7Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="acF-5d-RVG"/>
                             <constraint firstItem="pIp-De-FaH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bFP-c1-bY8"/>
+                            <constraint firstItem="dgv-h2-4V9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwL-XK-3vw"/>
                             <constraint firstItem="dgv-h2-4V9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPO-Mw-gG5"/>
-                            <constraint firstItem="pIp-De-FaH" firstAttribute="top" secondItem="j5r-Gd-x7Z" secondAttribute="bottom" constant="250" id="pqW-gy-MWN"/>
-                            <constraint firstItem="dgv-h2-4V9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sAl-GR-slC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="FitBeats" id="f12-uq-Zrr"/>
                     <connections>
+                        <outlet property="motivationalQuote" destination="kpj-Vi-cmV" id="K10-Vm-p6c"/>
                         <outlet property="workoutName" destination="rzC-3f-qBs" id="1SO-vD-fq3"/>
                     </connections>
                 </viewController>
@@ -310,7 +338,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0cN-Sh-avA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90977398588058334" green="1" blue="0.91331105140571078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a25-Fs-gX4" firstAttribute="top" secondItem="0cN-Sh-avA" secondAttribute="top" constant="120" id="SBQ-XO-Atj"/>
                             <constraint firstItem="cpY-7G-een" firstAttribute="top" secondItem="0cN-Sh-avA" secondAttribute="top" constant="20" id="Wee-vz-AdS"/>
