@@ -151,7 +151,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ0-9Q-eug">
+
                                             <rect key="frame" x="354" y="0.0" width="44" height="21"/>
+
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -177,7 +179,20 @@
                             <outlet property="delegate" destination="BBV-wQ-5Wd" id="Pbn-QX-2Db"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NAt-0s-EUL"/>
+                    <navigationItem key="navigationItem" id="NAt-0s-EUL">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Pause" id="hEV-t3-hQX">
+                                <connections>
+                                    <action selector="pauseExercise:" destination="BBV-wQ-5Wd" id="iN2-S0-uze"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Skip" id="f07-Ag-O9t">
+                                <connections>
+                                    <action selector="skipExercise:" destination="BBV-wQ-5Wd" id="Tu3-iE-CWz"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqb-gb-Ksa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
