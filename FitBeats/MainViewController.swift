@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
 
     var workoutSelected : Workout?
     @IBOutlet var workoutName : UILabel!
+    @IBOutlet var motivationalQuote : UILabel!
+    
     
     let MSD = MySpotifyDelegate()
     var MusicVC : MusicViewController? = nil
@@ -24,6 +26,7 @@ class MainViewController: UIViewController {
         }
         workoutName.text = name;
         workoutName.textColor = .green
+        motivationalQuote.text = getQuote()
     }
            
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,5 +81,27 @@ class MainViewController: UIViewController {
         }
     }
     
+    func getQuote() -> String{
+        var myMotivationalString : String = ""
+        let quoteNum = Int.random(in: 0..<7)
+        switch quoteNum {
+        case 0:
+            myMotivationalString = "\"Winners Never Quit, and Quitters Never Win\""
+        case 1:
+            myMotivationalString = "\"There is No Failure, Except in No Longer Trying\""
+        case 2:
+            myMotivationalString = "\"Never Give Up on Something You Can't Go a Day Without Thinking About\""
+        case 3:
+            myMotivationalString = "\"It Does Not Matter how Slowly You Go, As Long as You Do Not Stop\""
+        case 4:
+            myMotivationalString = "\"You Cannot Beat the Person who Will Not Give Up\""
+        case 5:
+            myMotivationalString = "\"It Always Seems Impossible Until It's Done\""
+        case 6:
+            myMotivationalString = "\"Rise and Grind.\""
+        default:
+            myMotivationalString = "No Motivation For Today. Find it Within."
+        }
+        return myMotivationalString
+    }
 }
-
