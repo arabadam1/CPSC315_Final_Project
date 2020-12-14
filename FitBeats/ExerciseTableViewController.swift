@@ -13,7 +13,8 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
     var nameTextField = UITextField()
     var durationTextField = UITextField()
     var intensityTextField = UITextField()
-    let picker = UIPickerView()
+    let namePicker = UIPickerView()
+    let intensityPicker = UIPickerView()
     
     var workout: Workout? = nil {
         didSet {
@@ -30,7 +31,8 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
         if let workout = workout, let name = workout.name {
             self.navigationItem.title = "\(name) Exercises"
         }
-        picker.delegate = self
+        namePicker.delegate = self
+        intensityPicker.delegate = self
     }
 
     // MARK: - Table view data source
@@ -85,6 +87,7 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
         let alert = UIAlertController(title: "Create New Exercise", message: "", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
+            textField.inputView = self.namePicker
             textField.placeholder = "Name of Exercise"
             self.nameTextField = textField
         }
@@ -95,7 +98,7 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
         }
         
         alert.addTextField { (textField) in
-            textField.inputView = self.picker
+            textField.inputView = self.intensityPicker
             textField.placeholder = "Intensity"
             self.intensityTextField = textField
         }
@@ -107,7 +110,7 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
             let newExercise = Exercise(context: self.context)
             newExercise.name = nameText
             newExercise.length = Int32(durationText) ?? 10
-            newExercise.intensity = Int32(intensityText) ?? 5
+            newExercise.intensity = Int32(String(intensityText[intensityText.startIndex])) ?? 5
             newExercise.parentWorkout = self.workout
             self.exercises.append(newExercise)
             self.saveExercises()
@@ -142,22 +145,41 @@ class ExerciseTableViewController: UITableViewController, UIPickerViewDelegate, 
         tableView.reloadData()
     }
     
-    let pickerData = [String](arrayLiteral: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+    let intensityPickerData = [String](arrayLiteral: "1💧", "2💧", "3💧", "4💧", "5⚡️", "6⚡️", "7⚡️", "8🔥", "9🔥", "10🔥")
+    
+    let namePickerData = [String](arrayLiteral: "Stretches", "Jog", "Sprints", "Push-ups", "Sit-ups", "Crunches", "Chest fly", "Bench press", "Leg press", "Shrug", "Curls", "Squats", "Lunges", "Calf raises")
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        if pickerView == namePicker {
+            return namePickerData.count
+        }
+        if pickerView == intensityPicker {
+            return intensityPickerData.count
+        }
+        return 0
     }
 
     func pickerView( _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        if pickerView == namePicker {
+            return namePickerData[row]
+        }
+        if pickerView == intensityPicker {
+            return intensityPickerData[row]
+        }
+        return nil
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        intensityTextField.text = self.pickerData[row]
+        if pickerView == namePicker {
+            nameTextField.text = self.namePickerData[row]
+        }
+        if pickerView == intensityPicker {
+            intensityTextField.text = self.intensityPickerData[row]
+        }
     }
 
     /*

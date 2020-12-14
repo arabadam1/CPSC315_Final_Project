@@ -12,6 +12,7 @@ class ActiveExerciseCell: UITableViewCell {
     @IBOutlet var exerciseSubtype : UILabel!
     @IBOutlet var timeRemaining : UILabel!
     
+    var timer : Timer? = nil
     var secondsLeft : Int = 60 {
         didSet {
             if(secondsLeft == 0){
@@ -33,9 +34,14 @@ class ActiveExerciseCell: UITableViewCell {
     }
 
     func startTimer () {
-        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
             self.secondsLeft -= 1
         })
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
     }
     
     func update(with exercise: Exercise) {
