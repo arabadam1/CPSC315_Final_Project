@@ -108,21 +108,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveExerciseCell" id="hCc-tE-h7w" customClass="ActiveExerciseCell" customModule="FitBeats" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="21"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActiveExerciseCell" rowHeight="50" id="hCc-tE-h7w" customClass="ActiveExerciseCell" customModule="FitBeats" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hCc-tE-h7w" id="86y-Jh-X7I">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGl-J5-Uo5">
-                                            <rect key="frame" x="16" y="0.0" width="45" height="21"/>
+                                            <rect key="frame" x="16" y="0.0" width="45" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ0-9Q-eug">
-                                            <rect key="frame" x="354" y="0.0" width="44" height="21"/>
+                                            <rect key="frame" x="354" y="0.0" width="44" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Pause" id="hEV-t3-hQX">
                                 <connections>
-                                    <action selector="pauseExercise:" destination="BBV-wQ-5Wd" id="Lcf-3i-x8k"/>
+                                    <action selector="pauseExercise:" destination="BBV-wQ-5Wd" id="iN2-S0-uze"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Skip" id="f07-Ag-O9t">
