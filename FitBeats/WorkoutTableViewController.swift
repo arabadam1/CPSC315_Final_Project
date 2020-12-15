@@ -24,7 +24,6 @@ class WorkoutTableViewController: UITableViewController {
         let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(WorkoutTableViewController.selectWorkout))
         tableView.addGestureRecognizer(longTapGestureRecognizer)
         loadWorkouts()
-        print("General Kenobi")
     }
 
     // MARK: - Table view data source

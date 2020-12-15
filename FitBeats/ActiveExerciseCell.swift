@@ -9,8 +9,8 @@ import UIKit
 class ActiveExerciseCell: UITableViewCell {
 
     @IBOutlet var exerciseName : UILabel?
-    @IBOutlet var exerciseSubtype : UILabel!
     @IBOutlet var timeRemaining : UILabel!
+    @IBOutlet var intensity : UILabel?
     
     var timer : Timer? = nil
     var secondsLeft : Int = 60 {
@@ -46,6 +46,7 @@ class ActiveExerciseCell: UITableViewCell {
     
     func update(with exercise: Exercise) {
         exerciseName?.text = exercise.name
+        intensity?.text = "Intensity: " + String(exercise.intensity) + "/10"
         secondsLeft = Int(exercise.length)
     }
 
