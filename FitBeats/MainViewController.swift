@@ -13,12 +13,15 @@ class MainViewController: UIViewController {
     @IBOutlet var workoutName : UILabel!
     @IBOutlet var motivationalQuote : UILabel!
     
-    
-    let MSD = MySpotifyDelegate()
-    var MusicVC : MusicViewController? = nil
+    var appRemote: SPTAppRemote? {
+        get{
+            return(UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.appRemote
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        motivationalQuote.text = getQuote()
         // Do any additional setup after loading the view.
         guard let name = workoutSelected?.name else {
                 workoutName.text = "Please select a workout before starting!"
@@ -26,7 +29,7 @@ class MainViewController: UIViewController {
         }
         workoutName.text = name;
         workoutName.textColor = .green
-        motivationalQuote.text = getQuote()
+        
     }
            
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,10 +39,11 @@ class MainViewController: UIViewController {
                 if identifier == "BeginWorkoutSegue" {
                     if let startVC = segue.destination as? StartTableViewController {
                         startVC.currentWorkout = workoutSelected
+                        startVC.appRemote = appRemote
                     }
                 } else if identifier == "ChangeMusicSegue" {
                     if let MusicVC = segue.destination as? MusicViewController {
-                        MusicVC.mySpotifyDelegate = MSD
+                        MusicVC.appRemote = appRemote
                     }
                 } else if identifier == "ChangeWorkoutSegue" {
                     if let workoutVC = segue.destination as? WorkoutTableViewController {

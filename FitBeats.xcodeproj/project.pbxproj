@@ -23,6 +23,7 @@
 		AB1D53B7258433770006E4B1 /* MySpotifyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D53B6258433770006E4B1 /* MySpotifyDelegate.swift */; };
 		AB5AD9902572DE22003440D2 /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5AD98F2572DE22003440D2 /* WorkoutTableViewController.swift */; };
 		AB5AD99A2572E532003440D2 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5AD9992572E532003440D2 /* SpotifyiOS.framework */; };
+		AB61C03025880CE300DE62AB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB61C02F25880CE300DE62AB /* Song.swift */; };
 		AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED062572DC9A00BFB438 /* MusicViewController.swift */; };
 		AB65ED0B2572DC9A00BFB438 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB65ED052572DC9A00BFB438 /* MainViewController.swift */; };
 		AB6E6B272580615F00F80F99 /* SpotifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E6B262580615F00F80F99 /* SpotifyAPI.swift */; };
@@ -51,9 +52,10 @@
 		AB1D53B6258433770006E4B1 /* MySpotifyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotifyDelegate.swift; sourceTree = "<group>"; };
 		AB5AD98F2572DE22003440D2 /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		AB5AD9992572E532003440D2 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
-		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
-		AB65ED072572DC9A00BFB438 /* StartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartTableViewController.swift; path = /Users/adrianptrick/Desktop/CPSC315/CPSC315_Final_Project/FitBeats/StartTableViewController.swift; sourceTree = "<absolute>"; };
+		AB61C02F25880CE300DE62AB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		AB65ED052572DC9A00BFB438 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MainViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED062572DC9A00BFB438 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MusicViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/MusicViewController.swift; sourceTree = "<absolute>"; };
+		AB65ED072572DC9A00BFB438 /* StartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartTableViewController.swift; path = /Users/dillonshipley/Desktop/CPSC315_Final_Project/FitBeats/StartTableViewController.swift; sourceTree = "<absolute>"; };
 		AB6E6B262580615F00F80F99 /* SpotifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				AB6E6B262580615F00F80F99 /* SpotifyAPI.swift */,
 				AB65ED072572DC9A00BFB438 /* StartTableViewController.swift */,
 				7C63DB0F2571CE6A007F5006 /* AppDelegate.swift */,
+				AB61C02F25880CE300DE62AB /* Song.swift */,
 				7C63DB112571CE6A007F5006 /* SceneDelegate.swift */,
 				AB1D53B6258433770006E4B1 /* MySpotifyDelegate.swift */,
 				7C63DB152571CE6A007F5006 /* Main.storyboard */,
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB61C03025880CE300DE62AB /* Song.swift in Sources */,
 				7C71D1802576260E005B339C /* Workout+CoreDataProperties.swift in Sources */,
 				AB65ED0A2572DC9A00BFB438 /* MusicViewController.swift in Sources */,
 				7C71D1822576260E005B339C /* Exercise+CoreDataProperties.swift in Sources */,

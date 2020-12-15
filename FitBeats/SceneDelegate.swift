@@ -7,22 +7,52 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate {
+    
+    static private let kAccessTokenKey = "access-token-key"
+    let clientIdentifier = "6fbaa5569f1a443e8ad6b48a8af3dddd"
+    let redirectUri = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
 
     var window: UIWindow?
-    var viewController: MainViewController?
+    var viewController: MainViewController {
+        get {
+            let navController = self.window?.rootViewController?.children[0] as! UINavigationController
+            return navController.topViewController as! MainViewController
+        }
+    }
+    
+    lazy var appRemote: SPTAppRemote = {
+        let configuration = SPTConfiguration(clientID: self.clientIdentifier, redirectURL: self.redirectUri)
+        let appRemote = SPTAppRemote(configuration: configuration, logLevel: .debug)
+        appRemote.connectionParameters.accessToken = self.accessToken
+        appRemote.delegate = self
+        return appRemote
+    }()
 
+    var accessToken = UserDefaults.standard.string(forKey: kAccessTokenKey) {
+        didSet {
+            let defaults = UserDefaults.standard
+            defaults.set(accessToken, forKey: SceneDelegate.kAccessTokenKey)
+        }
+    }
+
+    func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
+        self.appRemote = appRemote
+    }
+    
+    func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
+        print("didFailConnectionAttemptWithError")
+    }
+    
+    func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
+        print("didDisconnectWithError")
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        // GS: adding for spotify so we can get access to ViewController's mySpotifyDelegate
-        let navController = self.window?.rootViewController as! UINavigationController
-        let viewControllers = navController.viewControllers
-        viewController = viewControllers[0] as! MainViewController
     }
     
     // GS: adding for Spotify
@@ -31,14 +61,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
 
-        let parameters = viewController?.MSD.appRemote.authorizationParameters(from: url);
+        let parameters = appRemote.authorizationParameters(from: url);
 
         if let access_token = parameters?[SPTAppRemoteAccessTokenKey] {
-            viewController?.MSD.appRemote.connectionParameters.accessToken = access_token
-            viewController?.MSD.accessToken = access_token
-        } else if let error_description = parameters?[SPTAppRemoteErrorDescriptionKey] {
-            // Show the error
-            print(error_description)
+            appRemote.connectionParameters.accessToken = access_token
+            self.accessToken = access_token
+        } else if let errorDescription = parameters?[SPTAppRemoteErrorDescriptionKey] {
+            print("~~~~\(errorDescription)")
         }
     }
 
@@ -52,6 +81,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidBecomeActive(_ scene: UIScene) {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        appRemote.connect()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
