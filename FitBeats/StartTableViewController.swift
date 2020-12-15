@@ -23,9 +23,11 @@ class StartTableViewController: UITableViewController {
         didSet {
             if(secondsLeft == 0){
                 currentlyPlayingIndex+=1
-                appRemote?.playerAPI?.play(playlist[currentlyPlayingIndex], callback: {(anyOptional, errorOptional) in
-                    print("successfully playing")
-                })
+                if exercises.count > 1 {
+                    appRemote?.playerAPI?.play(playlist[currentlyPlayingIndex], callback: {(anyOptional, errorOptional) in
+                        print("successfully playing")
+                    })
+                }
                 deleteExercise()
             }
         }
@@ -196,7 +198,8 @@ class StartTableViewController: UITableViewController {
             }
             print("")
             
-            let filteredByLength = filteredByIntensity.filter { song in
+            // commented out for test, needs error handling
+            /*let filteredByLength = filteredByIntensity.filter { song in
                 //filteredByLength creates a list of songs with a good length and similar intensities
                 if((song.length - Int(length)) < 25){
                     return true
@@ -209,11 +212,11 @@ class StartTableViewController: UITableViewController {
             for x in 0..<filteredByLength.count{
                 print(filteredByIntensity[x].name)
             }
-            print("")
+            print("")*/
             
             var bestSong: String = ""
-            bestSong = filteredByLength[0].URI
-            print(filteredByLength[0].name + " was added to the playlist.")
+            bestSong = filteredByIntensity[0].URI
+            print(filteredByIntensity[0].name + " was added to the playlist.")
             var closestLength : Int = 1000000 //dummy variable
             
             //the next loop picks the song with the CLOSEST LENGTH to play during your workout
